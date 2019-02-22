@@ -6,7 +6,10 @@
     <title>@ViewBag.Title - Comic Book Gallery</title>
     <link href="~/Content/site.css" rel="stylesheet" type="text/css" />
     <link href="~/Content/bootstrap.min.css" rel="stylesheet" type="text/css" />
+    
+    <!-- Modernizer - Detects what htmll, css, and js the user's browser has available-->
     <script src="~/Scripts/modernizr-2.6.2.js"></script>
+
 </head>
 <body>
     <div class="navbar navbar-inverse navbar-fixed-top">
@@ -28,6 +31,7 @@
     </div>
 
     <div class="container body-content">
+        <!--Layout page can only contain a single call to the RenderBody method-->
         @RenderBody()
         <hr />
         <footer>
