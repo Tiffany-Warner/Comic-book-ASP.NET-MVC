@@ -3,23 +3,20 @@
     ViewBag.Title = "Comic Book Detail";
 }
 
-<div>
-    <h1>@ViewBag.SeriesTitle</h1>
-        <h2>Issue #@ViewBag.IssueNumber</h2>
-        <h5>Description:</h5>
-        <div>@Html.Raw(ViewBag.Description)</div>
+<h1>@ViewBag.SeriesTitle</h1>
+    <h2>Issue #@ViewBag.IssueNumber</h2>
+    <h5>Description:</h5>
+    <div>@Html.Raw(ViewBag.Description)</div>
 
-        <!--Check if artists array has elements-->
-        @if (ViewBag.Artists.Length > 0) {
-            <h5>Artists:</h5>
-            <div>
-                <ul>
-                    <!--Loop through array and display each-->
-                    @foreach (var artist in ViewBag.Artists) {
-                            <li>@artist</li>
-                    }
-                </ul>
-            </div>
-        }
-
-</div>
+    <!--Check if artists array has elements-->
+    @if (ViewBag.Artists.Length > 0) {
+        <h5>Artists:</h5>
+        <div>
+            <ul>
+                <!--Loop through array and display each-->
+                @foreach (var artist in ViewBag.Artists) {
+                        <li>@artist</li>
+                }
+            </ul>
+        </div>
+    }
