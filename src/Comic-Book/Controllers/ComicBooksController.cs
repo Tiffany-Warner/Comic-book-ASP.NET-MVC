@@ -18,6 +18,12 @@ namespace Comic_Book.Controllers
             _comicBookRepository = new ComicBookRepository();
         }
         //? means the type is nullable
+
+        public ActionResult Index()
+        {
+            var comicBooks = _comicBookRepository.GetComicBooks();
+            return View(comicBooks);
+        }
         public ActionResult Detail(int? id)
         {
             if(id == null)
